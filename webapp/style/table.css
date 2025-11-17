@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f3ff;
+    color: #2d2d2d;
+}
+
+.container {
+    max-width: 700px;
+    margin: 60px auto;
+    background-color: white;
+    border: 2px solid #d6bcfa;
+    border-radius: 16px;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(107, 70, 193, 0.15);
+}
+
+h2 {
+    text-align: center;
+    color: #553c9a;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* ======= Таблица последней проверки ======= */
+.results-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 15px;
+    margin: 25px 0;
+}
+
+.results-table th {
+    background-color: #6b46c1;
+    color: white;
+    padding: 12px 10px;
+    font-weight: 600;
+    border-bottom: 2px solid #553c9a;
+}
+
+.results-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e9d8fd;
+}
+
+.results-table tr:nth-child(even) td {
+    background-color: #faf5ff;
+}
+
+.results-table tr:hover td {
+    background-color: #ede9fe;
+    transition: 0.2s;
+}
+
+.hit {
+    color: #2f855a;
+    font-weight: bold;
+}
+
+.miss {
+    color: #c53030;
+    font-weight: bold;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    text-decoration: none;
+    background-color: #6b46c1;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.2s;
+}
+
+.back-link:hover {
+    background-color: #553c9a;
+    text-decoration: none;
+    color: white;
+}
