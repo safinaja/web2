@@ -1,0 +1,32 @@
+package org.example.webb.controller;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+
+@WebServlet("/controller")
+public class ControllerServlet extends HttpServlet {
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+
+        if (pointCheckRequest(req)) {
+            req.getRequestDispatcher("/areaCheck").forward(req, resp);
+        } else {
+            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+        }
+    }
+    private boolean pointCheckRequest(HttpServletRequest req) {
+        String x = req.getParameter("x");
+        String y = req.getParameter("y");
+        String r = req.getParameter("r");
+
+        return x != null && y != null && r != null &&
+                !x.isEmpty() && !y.isEmpty() && !r.isEmpty();
+    }
+}
