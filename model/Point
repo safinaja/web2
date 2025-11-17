@@ -1,0 +1,47 @@
+package org.example.webb.model;
+
+public final class Point {
+    private final double x;
+    private final double y;
+    private final double r;
+    private final String timestamp;
+    private final double workTime;
+    private final boolean hit;
+
+    public Point(double x, double y, double r, boolean hit, String timestamp, double workTime) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.hit = hit;
+        this.timestamp = timestamp;
+        this.workTime = workTime;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+
+    public double getR() {
+        return r;
+    }
+
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+
+    public double getWorkTime() {
+        return workTime;
+    }
+
+
+    public boolean isHit() {
+        return hit;
+    }
+
+}
